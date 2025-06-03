@@ -14,7 +14,7 @@ const cors = require("cors");
 
 // Mongoose DataBase Connection
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://sachinpathania525:oAvY7H5EREsUUku4@youtubeclone.ojueu0j.mongodb.net/") 
+mongoose.connect("mongodb+srv://sachinpathania525:oAvY7H5EREsUUku4@youtubeclone.ojueu0j.mongodb.net/youtubeclone?retryWrites=true&w=majority  ") 
 .then(()=>{
      console.log("Db connect");
 }).catch((err)=>{
