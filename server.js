@@ -14,7 +14,7 @@ const cors = require("cors");
 
 // Mongoose DataBase Connection
 const mongoose = require("mongoose");
-mongoose.connect(process.env.DB_URL)
+mongoose.connect("mongodb+srv://sachinpathania525:oAvY7H5EREsUUku4@youtubeclone.ojueu0j.mongodb.net/") 
 .then(()=>{
      console.log("Db connect");
 }).catch((err)=>{
