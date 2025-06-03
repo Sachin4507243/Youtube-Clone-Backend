@@ -27,7 +27,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173", // Your frontend origin
+    origin: "https://you-tube-clone-frontend-alpha.vercel.app/", // Your frontend origin
     credentials: true, // Allow credentials (cookies)
   })
 );
