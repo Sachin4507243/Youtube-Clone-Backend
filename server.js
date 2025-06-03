@@ -25,12 +25,22 @@ mongoose.connect("mongodb+srv://sachinpathania525:oAvY7H5EREsUUku4@youtubeclone.
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: "https://you-tube-clone-frontend-alpha.vercel.app/", // Your frontend origin
-    credentials: true, // Allow credentials (cookies)
-  })
-);
+// CORS Configuration
+const allowedOrigins = [
+  'https://you-tube-clone-frontend-alpha.vercel.app',
+  'https://youtube-clone-backend-three.vercel.app'
+];
+
+app.use(cors({
+  origin: function(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+}));
 
 
 // Routes
