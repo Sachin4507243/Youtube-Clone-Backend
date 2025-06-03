@@ -28,7 +28,7 @@ app.use(cookieParser());
 // CORS Configuration
 const allowedOrigins = [
   'https://you-tube-clone-frontend-alpha.vercel.app',
-  'https://youtube-clone-backend-three.vercel.app'
+  'https://youtube-clone-backend-1l11.onrender.com'
 ];
 
 app.use(cors({
